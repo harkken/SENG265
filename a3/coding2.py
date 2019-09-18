@@ -103,8 +103,8 @@ def handle_files_decode(read_file,write_file):
                 '''only characters between decimal 32 and 128 are permitted'''                
                 if char_list[count] < 128 and char_list[count] > 32:
                     while char_list[count] < 128 and char_list[count] > 32:
-
-                        word.append( chr(char_list[count] ))
+                        '''build word'''
+                        word.append( chr(char_list[count] ))  
                         count += 1
                     word_list.append( ''.join(word) )
                     writefile.write( word_list[ len(word_list) -1] )
